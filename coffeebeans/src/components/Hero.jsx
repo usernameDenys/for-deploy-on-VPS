@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import hero from '/src/assets/images/Hero.jpg'
 
 const Hero = () => {
     return (
         <section className='relative flex flex-col sm:flex-row rounded border border-gray-400 h-[400px] sm:h-[600px]'>
             <img
-                src="../src/assets/images/Hero.jpg"
+                src={hero}
                 alt="CoffeeBeans background"
                 className=" absolute w-full object-cover aspect-auto h-full"
             />

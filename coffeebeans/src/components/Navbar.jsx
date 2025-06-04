@@ -5,7 +5,7 @@ import { BsBag } from "react-icons/bs";
 import { RiMenu3Fill } from "react-icons/ri";
 import { ShopContext } from '../context/ShopContext';
 import { RiCloseLargeFill } from "react-icons/ri";
-
+import coffeeBeansIcon from '../assets/icons/coffeeBeansIcon.svg'
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <header className='flex items-center justify-between py-5 font-medium font-[Fraunces]'>
             <div className='flex items-center gap-2'>
-                <img src="/src/assets/icons/coffeeBeansIcon.svg" alt="Logo" className='w-10' />
+                <img src={coffeeBeansIcon} alt="cooffeebeans logo" className='w-10' />
                 <a href="/" className='text-lg font-bold sm:text-3xl'>CoffeeBeans</a>
             </div>
 
