@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
-import about from '../assets/images/about.jpg'
+import about from '../assets/images/about.webp'
 
 const About = () => {
     return (
@@ -15,6 +15,7 @@ const About = () => {
                     src={about}
                     alt='about us picture'
                     className='w-full md:max-w-[450px] '
+                    loading='lazy'
                 />
 
                 <article className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600 font-[Barlow]'>

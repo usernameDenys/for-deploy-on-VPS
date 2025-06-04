@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import hero from '/src/assets/images/Hero.jpg'
+import hero from '/src/assets/images/Hero.webp'
 
 const Hero = () => {
     return (
@@ -17,7 +17,9 @@ const Hero = () => {
                 </p>
                 <Link
                     to="/collection"
-                    className="inline-block bg-[#66D2CF] text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-[#5cc3c0] transition"
+                    aria-label="Browse our handpicked coffee collection"
+                    title='Browse our handpicked coffee collection'
+                    className="inline-block bg-[#66D2CF] text-gray-900 px-6 py-3 rounded-md text-sm font-semibold hover:bg-[#5cc3c0] transition"
                 >
                     Shop Coffee
                 </Link>

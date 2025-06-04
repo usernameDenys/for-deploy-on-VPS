@@ -14,6 +14,7 @@ const ProductCard = ({ id, image, name, price }) => {
                     src={image[0]}
                     alt={`Photo of ${name}`}
                     className="hover:scale-105 transition-transform duration-300 ease-in-out"
+                    loading='lazy'
                 />
                 <h4 className="pt-3 pb-1 text-sm">{name}</h4>
                 <p className="text-sm font-medium">
