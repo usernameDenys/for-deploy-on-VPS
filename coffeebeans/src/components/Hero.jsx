@@ -9,6 +9,8 @@ const Hero = () => {
                 src={hero}
                 alt="CoffeeBeans background"
                 className=" absolute w-full object-cover aspect-auto h-full"
+                width={1280}
+                height={600}
             />
             <div className="relative z-10 p-6 sm:p-12 ml-5 max-w-xl text-white">
                 <h1 className="text-3xl sm:text-6xl ont-bold mb-4 mt-0 sm:mt-20 pt-6 sm:pt-12 pr-2.5">Great coffee made simple.</h1>

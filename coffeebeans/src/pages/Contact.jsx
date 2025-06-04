@@ -13,6 +13,8 @@ const Contact = () => {
                     src={contact}
                     alt='cup of coffee photo'
                     className='w-full sm:max-w-[480px]'
+                    width={522}
+                    height={386}
                 />
 
                 <article className='flex flex-col justify-center items-start gap-4'>

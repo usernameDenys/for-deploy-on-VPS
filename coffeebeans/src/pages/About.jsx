@@ -16,6 +16,8 @@ const About = () => {
                     alt='about us picture'
                     className='w-full md:max-w-[450px] '
                     loading='lazy'
+                    width={522}
+                    height={376}
                 />
 
                 <article className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600 font-[Barlow]'>
