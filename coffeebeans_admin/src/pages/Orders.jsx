@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { backendUrl, currency } from '../../config.js';
 import { toast } from 'react-toastify';
-import { box } from "/src/assets/icons/box-tick.svg";
 
 const Orders = ({ token }) => {
     const [orders, setOrders] = useState([]);
@@ -66,7 +65,6 @@ const Orders = ({ token }) => {
                     <div
                         key={index}
                         className='grid grid-cols-1 md:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-2 border-gray-300 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700'>
-                        <img src={box} alt="box-image" />
                         <div>
                             <div>
                                 {order.items.map((item, index) => {
