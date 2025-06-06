@@ -75,7 +75,7 @@ const Product = () => {
                             ))}
                         </ul>
                     </article>
-                    <button onClick={handleAddToCart} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700 rounded'>ADD TO CART</button>
+                    <button onClick={handleAddToCart} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700 rounded cursor-pointer'>ADD TO CART</button>
                     <hr className='mt-8 sm:4/5' />
                     <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                         <p>100% Original product.</p>

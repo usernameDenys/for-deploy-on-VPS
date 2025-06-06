@@ -175,10 +175,10 @@ const PlaceOrder = () => {
                 <div className="mt-12">
                     <Title titlePart1={'PAYMENT'} titlePart2={'METHOD'} />
                     <div className="flex flex-col lg:flex-row gap-10">
-                        <div onClick={() => setPaymentMethod('stripe')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+                        {/* <div onClick={() => setPaymentMethod('stripe')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
                             <span className={` min-w-3.5 h-3.5 border rounded-full ${paymentMethod === 'stripe' ? 'bg-green-400' : ''}`}></span>
                             <FaStripe className="h-5 mx-4 text-2xl text-[#5167FC]" />
-                        </div>
+                        </div> */}
                         <div onClick={() => setPaymentMethod('cod')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
                             <span className={` min-w-3.5 h-3.5 border rounded-full ${paymentMethod === 'cod' ? 'bg-green-400' : ''}`}></span>
                             <p className='text-gray-500 text-sm font-medium mx-4'>CASH ON DELIVERY</p>
