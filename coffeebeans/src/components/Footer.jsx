@@ -7,7 +7,7 @@ const Footer = () => {
     return (
 
         <>
-            <div className='flex flex-col sm:grid grid-cols-[2fr_1fr_1fr_1fr] gap-14 my-10 mt-40 text-sm font-[Barlow]'>
+            <footer className='flex flex-col sm:grid grid-cols-[2fr_1fr_1fr_1fr] gap-14 my-10 mt-40 text-sm font-[Barlow]'>
                 <div className='w-foll'>
                     <div className='flex items-center gap-2 mb-5'>
                         <img src={coffeeBeansIcon} alt="cooffeebeans logo" />
@@ -43,7 +43,7 @@ const Footer = () => {
                     </ul>
                 </article>
 
-            </div>
+            </footer>
 
             <div>
                 <hr />
