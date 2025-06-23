@@ -11,11 +11,18 @@ const Login = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [agreeToPolicy, setAgreeToPolicy] = useState(false);
     const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+
+        if (!agreeToPolicy) {
+            toast.error('You must agree to the privacy policy to continue.');
+            return;
+        }
+
         try {
             if (currentState === 'Sign Up') {
 
@@ -60,6 +67,7 @@ const Login = () => {
             navigate('/');
         }
     }, [token]);
+
     return (
         <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800 font-[Barlow]' action="#" method="POST">
             <div className='inline-flex items-center gap-2 mb-2 mt-10'>
@@ -115,7 +123,21 @@ const Login = () => {
                     </span>
                 </div>
 
+                <div className="flex items-start gap-3 mt-2">
+                    <input
+                        type="checkbox"
+                        id="agreeToPolicy"
+                        checked={agreeToPolicy}
+                        onChange={(e) => setAgreeToPolicy(e.target.checked)}
+                        className="mt-1 w-4 h-4 accent-black cursor-pointer"
+                        required
+                    />
+                    <label htmlFor="agreeToPolicy" className="text-sm text-gray-700 leading-relaxed cursor-pointer">
+                        By checking this box, I agree that my data will be processed in accordance with the privacy policy.
+                    </label>
+                </div>
             </div>
+
             <div className='w-full flex justify-between text-sm mt-[-8px] px-3'>
                 {currentState === 'Login' ?
                     <p onClick={() => setCurrentState('Sign Up')} className='cursor-pointer'>No account yet?</p> : null
@@ -125,7 +147,6 @@ const Login = () => {
                 }
             </div>
             <button className='w-1/2 m-auto bg-black text-white px-8 py-2 mt-4 rounded cursor-pointer'>{currentState === 'Login' ? 'Sign In' : 'Sign Up'}</button>
-
 
         </form>
     )
